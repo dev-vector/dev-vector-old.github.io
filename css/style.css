@@ -1,156 +1,92 @@
-img{}
 
-/*Стиль для страницы и объектов*/
+/* Стиль для главных блоков */
+	body {margin: 0; background: #222 url(../images/fon1.jpg); }
+	section {width: 1000px; margin: 0 auto; }
+	header {position: relative; width: calc(100%-2px); height: 220px; margin: 0; 
+	background: #333 url(../images/sh1.jpg) center no-repeat; background-size: cover;  
+/*  background-attachment: fixed; */ border: 1px solid white; border-bottom: 0px; border-top: 0px; }
+	menu {position: relative; display: block; width: calc(100%-2px); background: #333 url(../images/m1.jpg) center no-repeat; 
+	background-size: cover; margin-bottom: 25px; border-radius: 0px 0px 6px 6px; border: 1px solid white; }
+	center {position: relative; display: block; width: calc (100% - 60px); padding: 50px 30px; margin: 0 0 25px 0; 
+	background: #333 url(../images/cn1.jpg) center no-repeat; background-size: cover; color: white; text-align: left; 
+	font-size: 18px; border-radius: 6px; border: 1px solid white; }
+	footer {display: block; height: 320px; padding: 40px; background: #333 url(../images/ft-3.jpg) center no-repeat; 
+	background-size: cover; color: white; text-align: center; border-radius: 6px 6px 0px 0px; border: 1px solid white; border-bottom: 0px; } 
+	/* border: 3px double white; border-radius: 30px; */
 
-body {margin: 0; background: #222 url(../images/fon1.jpg);}
-p, h1, h2, h3, h4, h5, h6 {margin: 0}
-b {font-weight: bold; }
-i {font-style: arial; }
+/* Стиль для подглавных блоков */
+    div.header {position: absolute; display: block; width: 385px; height: 90px; top: 15px; bottom: 0; 
+	left: 560px; right: 0; margin: 10px; padding: 15px 5px 15px 5px; background: rgba(99,99,99,0.6); 
+	font-style: bold; color: blanchedalmond; text-align: center; font-size: 20px; 
+	border-radius: 6px; box-shadow: 5px 5px 5px #777; }
+	div.center {width:100%; height: 100%; position: relative; display: block; }
+	div.footer {position: relative; display: block; width: 33.33%; height: 100%; float: left; }
 
-section {width: 1000px; margin: 0 auto;}
-
-/*  Шапка + меню.*/
-
-header {
-    position: relative; width: calc(100%-2px); height: 250px; margin: 0; 
-    background: #333 url(../images/sh1.jpg) center no-repeat; 
-	background-size: cover;  
-/*  background-attachment: fixed;*/
-    }
-    header tel {  
-    position: absolute; display: block; width: 390px; height: 80px; top: 10px; bottom: 0; 
-	left: 560px; right: 0; margin: 10px; padding: 15px 0 15px 15px;
-    color: #222; background: rgba(99,99,99,0.6);
-      }
-	header h2 { text-align: center; font-style: bold; 
-    color: blanchedalmond; font-size: 30px; margin: auto; }
-	header p1 { text-align: center; font-style: italic; 
-    color: blanchedalmond; font-size: 20px;x; margin: auto; display: block;}
-	header p { text-align: center; font-style: bold;
-    color: blanchedalmond; font-size: 20px; ; margin: auto; display: block;}
-/* 	header cap1 { font-weight: bold;
-	display: block; position: absolute; text-align: left;
-    color: #D9D9D9; font-size: 15px; } */
-
-    menu {
-        position: relative;
-        display: block;
-        width: calc(100%-2px);
-/*        height: 70px;*/
-        background: #333 url(../images/m1.jpg) center no-repeat; background-size: cover;
-        margin-bottom: 25px;
-    }
-    menu ul {overflow: hidden; width: 770px; margin: 0 auto; }
-    menu ul li {float: left;}
-    menu ul li a {display: block; padding: 20px 20px 25px; color: blanchedalmond; font-size: 20px; 
-	text-decoration: none; font-family: Arial;}
-
-/*  Центральный блок, о блоге, компани и т.д.*/
-    
-center {
-    width: 100%; background: #222; margin: 0 0 25px 0;}
-
-page {
-    position: relative; display: block; width: calc (100% - 60px); text-align: left; 
-	padding: 50px 30px; margin: 0 0 25px 0; background: #333 url(../images/cn1.jpg) center no-repeat; background-size: cover; }
-    
-  
-    page h2 {
-        color: blanchedalmond; font-size: 35px; margin: 10px; padding-left: 0%; padding-bottom: 10px; text-align: center;
-		}
-    page p {
-        color: white; font-size: 18px; font-family: Segoe UI; margin: 10px 10px 10px 10px; padding-left: 0%; 
-		}
-/*  Для того чтобы сделать обтекание вставленной кртинки необходимо задать параметры позиции и флоата.*/
-	page p foto {
-    width: 320px; height: 220px; display: block; float: left;
-	margin: 5px 20px 0px 0px; padding: 15px; 
-	background-size: cover; background-repeat: no-repeat; background-position: center; 
-	}
-    page q {
-        color: #999; font-size: 15px;}
-    page p span {color: blueviolet; font-size: 30px;}
+/* Стиль для списков */ 	
+/* Вопрос как сделать так чтобы блоки автоматически выранивались в центре при изменении длины текста в блоках меню, 
+   дабы избавиться от ручной подгонки блоков в элементе margin-left. Ответ в технологии CSS flexbox и других подобных */
+    menu ul {list-style: none; margin: auto; }
+	ul.topmenu {width: 100%; margin-left: 65px; }
+	ul.topmenu:after {content: ""; display: table; clear: both; }
+	ul.topmenu > li {position: relative; float: left; }
+	ul.topmenu > li > a {display: inline-block; padding: 20px; font-family: Arial; font-size: 20px; color: blanchedalmond; 
+	text-shadow: 2px 2px 3px black; text-transform: uppercase; }
+	ul.topmenu li a:hover {color: red; }
+	.submenu-link:after {content: "↓"; font-family: "FontAwesome"; color: inherit; margin-left: 10px; }
+	menu li:hover {visibility: visible; }
+	.submenu {background: #273037; position: absolute; left: 0; top: 100%; z-index: 5; width: 225px; opacity: 0;
+	transform: scaleY(0); transform-origin: 0 0; transition: .5s ease-in-out; border: 1px solid white; }
+	.submenu a {color: white; text-align: left; padding: 12px 15px; font-size: 12px; text-transform: uppercase; }
+	.submenu li:last-child a {border-bottom: none; }
+	.topmenu > li:hover .submenu {opacity: 1; transform: scaleY(1); }
+	footer ul {padding: 20px; text-decoration: underline; }
+	footer a {font-size: 20px; color: #fff; }
 	
-	page a {color: #fff;}
-	page m2 {text-align:center; display: block;}
-/*  page a {
-    position: absolute; right: 27px; bottom: 15px; display: block; width: 180px; text-align: center; padding: 10px; background: red; color: #fff; text-decoration: none;}*/
-	
+/*Стиль для текстов*/
+a {color: blanchedalmond; }
+header a:hover {color: blue; }
+h1 {font-size: 25px; } h2 {font-size: 30px; } 
+h6 {font-size: 25px; margin-bottom: 15px; color: blanchedalmond; font-weight: bold; }
+h3.center {color: blanchedalmond; font-size: 35px; margin: 10px; padding-left: 0%; padding-bottom: 10px; text-align: center; text-shadow: 1px 1px 2px black; }
+p {display: block; }
+p.center {font-family: Segoe UI; margin: 10px 10px 10px 10px; text-shadow: 1px 1px 2px black; }
+p.question {display: block; padding: 10px 0px 10px 0px; }
+p#info {font-size: 18px; font-family:none; text-align: center; font-style: italic; text-shadow: none;  }
+b {font-weight: bold; } /* выделенный текст */
+i {font-style: italic; } /* курсивный текст */
+u, ins {text-decoration: underline; } /* подчеркивание, (семантика) исправленная информация */
+s, del {text-decoration: line-through; } /* зачеркивание, (семантика) устаревшая информация */
+sup {vertical-align: super; font-size: 10px; } /* верхний регистр */
+sub {text-transform: sub; } /* нижний регистр */
+abbr, acronym {text-decoration: underline grey; } /* абревиатура, акроним */
+	q {quotes: "«" "»"; } /* строковая цитата, выделен тип кавычек */
+	q:before {content: open-quote; } q:after {content: close-quote; }	
+	cite {font-style: italic; } /* источник цитаты */
+	address {font-style: italic; } /* контактная информация: физический данные ФИО, адрес и телефон */
 
-/*  Статьи, новости.*/
+/* Стиль для формы */
+fieldset {border: 4px double black; padding: 5px 15px 15px 15px; color: white; font-family: Segoe UI; margin: 10px 20px 10px 20px; }
+legend {font-size: 20px; }
+textarea {display: block; width: 70%; height: 70.5px; margin-top: 10px; border: none; font-family: Courier New; resize: none; /*уберает уголок*/ }
+input{display: block; }
+input[type="radio"], [type="checkbox"] {display: inline-block; }
+input[type="datetime"], [type="datetime-local"], [type="search"] {border-radius: 6px; border: none; outline: none }
+input[type="reset"] {margin-top: 15px; }
 
-news {
-    position: relative; display: block; width: calc(100%-2px); overflow: hidden; margin: 0 0 25px 0; background: #333; 
-	color: #777;}
-    
-    news div {
-        position: relative; width: calc(100% - 60px); margin: 30px; height: 230px; float: left; text-align: left;}
-    news div foto {
-        width: 250px; height: 200px; display: block; position: absolute; padding: 15px;
-        background-size: cover; background-repeat: no-repeat; background-position: center;}
-    news div h3 {
-        margin: 10px; font-size: 22px; font-weight: bold; display: block; padding-left: 290px}
-    news div p {
-        margin: 10px; padding-left: 290px;}
-    news div a {
-        position: absolute; right: 20px; bottom: 30px; display: block; width: 95px; text-align: center; padding: 10px; background: red; color: #fff; text-decoration: none;}
-    news div info {
-        display: block; padding-left: 290px; text-align: left; margin-left: 10px;}  
-/*  news avtor {display: block; position: absolute; left: 85px; bottom: 10px; margin: 0;}  
-    news category {display: block; position: absolute; left: 35px; text-align: right; margin: 0}
-    news comments {position: absolute; left: 200px; bottom: 10px; display: block; margin-top: 20px; margin-bottom: 10px;}*/
+label#test_radio_1, #test_radio_2, #test_radio_3 {display: block; }
+select#select_multi {display: block; }
 
-/*  Подвал*/
+footer div form input {display: block; width: 80%; margin-bottom: 10px; margin-left: 22px; padding: 8px; border: none; font-family: Courier New; }
+footer div form textarea {display: block; width: 80%; height: 40px; margin-bottom: 10px; margin-left: 22px; padding: 8px; border: none; }
+footer div form input.send {width: 120px; }
 
-footer {
-    display: block; height: 300px; color: white; padding: 40px;
-    background: #333 url(../images/ft-3.jpg) center no-repeat; background-size: cover; text-align: center;} 
-	footer p {color: white; text-align: center;}
-	
-/* 	footer p mllogo {    
-	width: 15px; height: 15px; display: block;
-	margin: 20px; padding: 15px; 
-	background-size: cover; background-repeat: no-repeat; background-position: center;
-	}
-	footer p tellogo {
-	width: 15px; height: 15px; display: block; 
-	margin: 20px; padding: 15px; 
-	background-size: cover; background-repeat: no-repeat; background-position: center;
-	} */
-footer div {
-    position: relative; display: block;
-    width: 33.33%; height: 100%; float: left;}
-footer div h6 {font-size: 25px; margin-bottom: 15px; color: blanchedalmond; text-align: center; font-weight: bold;}
+/* Стиль для таблиц */
+td {width: 50%; height: 100%; }
 
-/* footer div ul {padding: 20px;}
-footer div ul li {}
-footer div ul li a {color: #fff;} */
-
-footer div form {display: block; width: 100%; font-family: Courier New;}
-footer div form input {display: block; width: 100%; margin-bottom: 10px; padding: 10px; border: none; font-family: Courier New;}
-footer div form textarea {display: block; width: 100%; margin-bottom: 10px; padding: 10px; border: none; font-family: Courier New; resize: none; /*уберает уголок*/ }
-footer div form input.send {width: 120px;}
+/* Стиль для других элементов */
+span.footer {display: block; padding: 5px 0px 10px 0px; }
 footer img {border: none; width: 35px; height: 35px; display:inline-block; margin: auto; }
-footer span {display: block; text-align: center; padding: 5px 0px 10px 0px;}
-footer div p1 {display: block; color: black; font-weight: bold; font-style: italic; font-size: 20px; background: grey;}
-
-
-/*Страница перехода.*/
-
-page1 {
-    position: relative; display: block; width: calc (100% - 60px); text-align: left; padding: 50px 30px; margin: 0 0 25px 0; background: #eee; border: 1px solid #ddd;}
-    
-    page1 avtor { display: block; padding-bottom: 15px}
-    page1 foto {
-        width: 100%; height: 400px; display: block; background-size: cover; background-repeat: no-repeat; background-position: center;
-            margin-bottom: 22px;}
-    page1 h2 {
-        color: #555; font-size: 32px; margin-bottom: 22px;}
-    page1 p {
-        color: #555; font-size: 20px;}
-    page1 q {
-        color: #999; font-size: 15px;}
-    page1 p span {color: blueviolet; font-size: 30px;}
-    page1 a {
-        position: absolute; right: 10px; bottom: 10px; display: block; width: 180px; text-align: center; padding: 10px; background: red; color: #fff;}
-    page1 span {position: absolute; display: block; margin-top: 20px}
+foto {width: 270px; height: 170px; display: block; float: left; margin: 5px 20px 5px 0px; padding: 15px; background-size: cover; 
+background-repeat: no-repeat; background-position: center; border-radius: 10px; } /* для того чтобы сделать обтекание вставленной картинки необходимо задать параметры позиции и флоата.*/
+audio {width: 280px; height: 20px; margin: 10px; outline: none; }
+video {width: 280px; height: 150px; margin: 10px; outline: none; }
