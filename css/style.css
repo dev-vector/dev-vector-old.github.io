@@ -52,6 +52,7 @@ p {display: block; }
 p.center {font-family: Segoe UI; margin: 10px 10px 10px 10px; text-shadow: 1px 1px 2px black; }
 p.question {display: block; padding: 10px 0px 10px 0px; }
 p#info {font-size: 18px; font-family:none; text-align: center; font-style: italic; text-shadow: none;  }
+p.footer {font-family: Courier New; font-size: 13px;}
 b {font-weight: bold; } /* выделенный текст */
 i {font-style: italic; } /* курсивный текст */
 u, ins {text-decoration: underline; } /* подчеркивание, (семантика) исправленная информация */
@@ -63,6 +64,7 @@ abbr, acronym {text-decoration: underline grey; } /* абревиатура, а�
 	q:before {content: open-quote; } q:after {content: close-quote; }	
 	cite {font-style: italic; } /* источник цитаты */
 	address {font-style: italic; } /* контактная информация: физический данные ФИО, адрес и телефон */
+red_t {color: red; }
 
 /* Стиль для формы */
 fieldset {border: 4px double black; padding: 5px 15px 15px 15px; color: white; font-family: Segoe UI; margin: 10px 20px 10px 20px; }
@@ -85,8 +87,10 @@ td {width: 50%; height: 100%; }
 
 /* Стиль для других элементов */
 span.footer {display: block; padding: 5px 0px 10px 0px; }
+span.contact {text-decoration: line-through; }
 footer img {border: none; width: 35px; height: 35px; display:inline-block; margin: auto; }
 foto {width: 270px; height: 170px; display: block; float: left; margin: 5px 20px 5px 0px; padding: 15px; background-size: cover; 
 background-repeat: no-repeat; background-position: center; border-radius: 10px; } /* для того чтобы сделать обтекание вставленной картинки необходимо задать параметры позиции и флоата.*/
 audio {width: 280px; height: 20px; margin: 10px; outline: none; }
 video {width: 280px; height: 150px; margin: 10px; outline: none; }
+
