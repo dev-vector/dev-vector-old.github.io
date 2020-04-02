@@ -8,7 +8,7 @@
 	menu {position: relative; display: block; width: calc(100%-2px); background: #333 url(../images/m1.jpg) center no-repeat; 
 	background-size: cover; margin-bottom: 25px; border-radius: 0px 0px 6px 6px; border: 1px solid white; }
 	center {position: relative; display: block; width: calc (100% - 60px); padding: 50px 30px; margin: 0 0 25px 0; 
-	background: #333 url(../images/cn1.jpg) center no-repeat; background-size: cover; color: white; text-align: left; 
+	background: rgba(0,0,255,0.2); color: white; text-align: left; 
 	font-size: 18px; border-radius: 6px; border: 1px solid white; }
 	footer {display: block; height: 320px; padding: 40px; background: #333 url(../images/ft-3.jpg) center no-repeat; 
 	background-size: cover; color: white; text-align: center; border-radius: 6px 6px 0px 0px; border: 1px solid white; border-bottom: 0px; } 
