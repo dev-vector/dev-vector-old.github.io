@@ -93,7 +93,7 @@ td {width: 50%; height: 100%; }
 span.footer {display: block; padding: 5px 0px 10px 0px; }
 span.contact {text-decoration: line-through; }
 footer img {border: none; width: 35px; height: 35px; display:inline-block; margin: auto; }
-foto {width: 250px; height: 250px; display: block; float: left; margin: 5px 20px 5px 0px; padding: 15px; background-size: cover; 
+foto {width: 250px; height: 190px; display: block; float: left; margin: 5px 20px 5px 0px; padding: 15px; background-size: cover; 
 background-repeat: no-repeat; background-position: center; border-radius: 10px; } /* для того чтобы сделать обтекание вставленной картинки необходимо задать параметры позиции и флоата.*/
 audio {width: 280px; height: 20px; margin: 10px; outline: none; }
 video {width: 280px; height: 150px; margin: 10px; outline: none; }
