@@ -45,6 +45,8 @@
 /*Стиль для текстов*/
 a {color: blanchedalmond; }
 header a:hover {color: blue; }
+a.pages:hover {color: #FFD373; }
+a.pages {color: #5DC8CD; position: absolute; left: 90%; right: 0; text-decoration: underline; }
 h1 {font-size: 25px; } h2 {font-size: 30px; } 
 h6 {font-size: 25px; margin-bottom: 15px; color: blanchedalmond; font-weight: bold; }
 h3.center {color: blanchedalmond; font-size: 35px; margin: 10px; padding-left: 0%; padding-bottom: 10px; text-align: center; text-shadow: 1px 1px 2px black; }
