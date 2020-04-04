@@ -34,7 +34,7 @@
 	ul.topmenu > li > a {display: inline-block; padding: 20px; font-family: Arial; font-size: 20px; color: blanchedalmond; 
 	text-shadow: 2px 2px 3px black; text-transform: uppercase; }
 	ul.topmenu li a:hover {color: red; }
-	.submenu-link:after {content: "↓"; font-family: "FontAwesome"; color: inherit; margin-left: 10px; }
+	.submenu-link:after {font-family: "FontAwesome"; color: inherit; margin-left: 10px; }
 	menu li:hover {visibility: visible; }
 	.submenu {background: #273037; position: absolute; left: 0; top: 100%; z-index: 5; width: 225px; opacity: 0;
 	transform: scaleY(0); transform-origin: 0 0; transition: .5s ease-in-out; border: 1px solid white; }
